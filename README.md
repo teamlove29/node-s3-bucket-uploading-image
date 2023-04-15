@@ -5,3 +5,30 @@
 ![create_discord_3](https://cdn.nerdyelectronics.com/wp-content/uploads/2020/03/NE-S3-storage.png)
 
 - ข้อมูลเพิ่มเติมเพิ่มความปลอดภัยให้กับ​ S3 [CloudFront + AWS S3](https://snappytux.com/how-to-set-up-a-cloudfront-for-amazon-s3/)
+
+### SET JSON Permissions
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListAllMyBuckets",
+                "s3:ListBucket"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::teem-vintage/*"
+            ]
+        }
+    ]
+}
+```

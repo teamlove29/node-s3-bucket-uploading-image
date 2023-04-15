@@ -37,3 +37,9 @@ lerna-debug.log*
 
 # Others
 tmp
+
+
+.DS_Store
+*.log
+yarn.lock
+package-lock.json
